@@ -28,15 +28,14 @@ public class PlayerController : MonoBehaviour
 
         transform.Translate(lastMoveDirection * 2.8f * Time.deltaTime, Space.World);
         transform.up = lastMoveDirection.normalized;
-
-        void OnCollisionEnter2D(Collision2D col)
+    }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.name == "Crate")
         {
-            if (col.gameObject.name == "Crate")
-            {
-                col.transform.parent = Player.transform;
-                Light.SetActive(false);
-                CrateLight.SetActive(true);
-            }
+            col.transform.parent = Player.transform;
+            Light.SetActive(false);
+            CrateLight.SetActive(true);
         }
     }
 }

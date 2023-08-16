@@ -223,7 +223,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 0.62
+  m_PointLightOuterRadius: 0.47
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -844,7 +844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e846bd8cca453409b6ba49775de6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LightTime: 10
+  LightTime: 15
   isOn: 0
   Flashlight: {fileID: 1308256627}
   BatteryText: {fileID: 316858682}
@@ -1617,7 +1617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0999f15bf1d60643a3402b955e387ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximum: 10
+  maximum: 15
   _FlashlightController: {fileID: 497441576}
   FlashLightMask: {fileID: 999449884}
 --- !u!114 &926411033
