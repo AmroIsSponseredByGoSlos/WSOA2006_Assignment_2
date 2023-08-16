@@ -7,28 +7,36 @@ public class PlayerController : MonoBehaviour
     public GameObject Light;
     public GameObject Player;
     public GameObject CrateLight;
-    // Start is called before the first frame update
+    private Vector2 lastMoveDirection = Vector2.zero; // Add this variable at the top of your class
+
     void Start()
     {
         Player = gameObject;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         float HorizontalMove = Input.GetAxis("Horizontal");
         float VerticalMove = Input.GetAxis("Vertical");
         Vector2 MoveDirection = new Vector2(HorizontalMove, VerticalMove);
-        transform.Translate(MoveDirection * 2.8f * Time.deltaTime, Space.World);
-        transform.up = MoveDirection.normalized;
-    }
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.name == "Crate")
+
+        if (MoveDirection != Vector2.zero)
         {
-            col.transform.parent = Player.transform;
-            Light.SetActive(false);
-            CrateLight.SetActive(true);
+            lastMoveDirection = MoveDirection; // Store the non-zero input direction
+        }
+
+        transform.Translate(lastMoveDirection * 2.8f * Time.deltaTime, Space.World);
+        transform.up = lastMoveDirection.normalized;
+
+        void OnCollisionEnter2D(Collision2D col)
+        {
+            if (col.gameObject.name == "Crate")
+            {
+                col.transform.parent = Player.transform;
+                Light.SetActive(false);
+                CrateLight.SetActive(true);
+            }
         }
     }
 }
