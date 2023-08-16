@@ -7,8 +7,9 @@ public class PlayerController : MonoBehaviour
     public GameObject Light;
     public GameObject Player;
     public GameObject CrateLight;
+    public GameObject OtherCrateLight;
     private Vector2 lastMoveDirection = Vector2.zero; // Add this variable at the top of your class
-
+    public int ActiveBlock = 0;
     void Start()
     {
         Player = gameObject;
@@ -31,11 +32,13 @@ public class PlayerController : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name == "Crate")
+        if (col.gameObject.name == "RedCrate")
         {
             col.transform.parent = Player.transform;
             Light.SetActive(false);
             CrateLight.SetActive(true);
+            OtherCrateLight.SetActive(true);
+            ActiveBlock = 1;
         }
     }
 }
