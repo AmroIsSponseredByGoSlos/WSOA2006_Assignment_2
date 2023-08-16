@@ -7,12 +7,12 @@ public class ProgressBar : MonoBehaviour
 {
     public int maximum;
     public FlashlightController _FlashlightController;
-    public Image healthMask;
+    public Image FlashLightMask;
 
 
     void Update()
     {
-        GetCurrentFill(healthMask, _FlashlightController.LightTime);
+        GetCurrentFill(FlashLightMask, _FlashlightController.LightTime);
     }
 
     void GetCurrentFill(Image mask, float attributeValue)

@@ -2,15 +2,30 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FlashlightController : MonoBehaviour
 {
-    public float LightTime;
+    public int LightTime;
+    private float countdownInterval = 1f; // Update timer every one second
+    private float countdownTimer = 0f; // Update timer every one second
+    
     public bool isOn;
+    
    [SerializeField]private GameObject Flashlight;
+   [SerializeField]private GameObject BatteryText;
+   [SerializeField]private Text _BatteryText;
 
     private void Update()
     {
+        countdownTimer += Time.deltaTime;
+        
+        if (countdownTimer >= countdownInterval)
+        {
+            countdownTimer -= countdownInterval;
+            DecreaseLightTime();
+        }
+        
         if (Input.GetButtonDown("Fire1"))
         {
             ActivateLight();
@@ -20,7 +35,7 @@ public class FlashlightController : MonoBehaviour
         {
             DeactivateLight();   
         }
-        DecreaseLightTime();
+     
     }
 
     private void ActivateLight()
@@ -29,6 +44,7 @@ public class FlashlightController : MonoBehaviour
         {
             isOn = true;
             Flashlight.SetActive(true);
+            DecreaseLightTime();
         }
     }
     private void DeactivateLight()
@@ -41,9 +57,25 @@ public class FlashlightController : MonoBehaviour
     }
     private void DecreaseLightTime()
     {
-        if (isOn )
+        if (isOn && LightTime > 0)
         {
-            LightTime -= Time.deltaTime;
+            LightTime -= 1;
+        }
+        else if (isOn && LightTime <= 0)
+        {
+            isOn = false;
+            Flashlight.SetActive(false);
+        }
+
+        if (isOn && LightTime == 2)
+        {
+            BatteryText.SetActive(true);
+        }
+        
+        if (isOn && LightTime == 0)
+        {
+            _BatteryText.text = "No Battery left !!";
         }
     }
 }
+
