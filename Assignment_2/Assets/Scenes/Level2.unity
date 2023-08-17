@@ -1015,6 +1015,8 @@ MonoBehaviour:
   Player: {fileID: 777281267}
   CrateLight: {fileID: 1902405959}
   OtherCrateLight: {fileID: 220983068}
+  EnemyPrefab: {fileID: 0}
+  HoldingPoint: {fileID: 0}
   ActiveBlock: 0
 --- !u!212 &777281273
 SpriteRenderer:
@@ -3118,7 +3120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2091394096
 MonoBehaviour:
   m_ObjectHideFlags: 0
