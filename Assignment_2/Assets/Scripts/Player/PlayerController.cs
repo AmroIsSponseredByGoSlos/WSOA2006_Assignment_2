@@ -8,7 +8,9 @@ public class PlayerController : MonoBehaviour
     public GameObject Player;
     public GameObject CrateLight;
     public GameObject OtherCrateLight;
+    public GameObject EnemyPrefab;
     private Vector2 lastMoveDirection = Vector2.zero; // Add this variable at the top of your class
+    [SerializeField] private Transform HoldingPoint;
     public int ActiveBlock = 0;
     void Start()
     {
@@ -39,6 +41,10 @@ public class PlayerController : MonoBehaviour
             CrateLight.SetActive(true);
             OtherCrateLight.SetActive(true);
             ActiveBlock = 1;
+        }
+        if (col.gameObject.CompareTag("Level3Crate"))
+        {
+            EnemyPrefab.SetActive(true);
         }
     }
 }
