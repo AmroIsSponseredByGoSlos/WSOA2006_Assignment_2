@@ -35,7 +35,18 @@ public class FlashlightController : MonoBehaviour
         {
             DeactivateLight();   
         }
-     
+
+
+        if (LightTime == 0)
+        {
+            BatteryText.SetActive(true);
+            _BatteryText.text = "No Battery left !!";
+        }
+        if (LightTime > 2)
+        {
+            BatteryText.SetActive(false);
+            _BatteryText.text = "Battery Low !!!";
+        }
     }
 
     private void ActivateLight()
@@ -71,11 +82,7 @@ public class FlashlightController : MonoBehaviour
         {
             BatteryText.SetActive(true);
         }
-        
-        if (isOn && LightTime == 0)
-        {
-            _BatteryText.text = "No Battery left !!";
-        }
+
     }
 }
 

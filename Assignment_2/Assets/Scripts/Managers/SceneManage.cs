@@ -7,7 +7,7 @@ public class SceneManage : MonoBehaviour
 {
     public void LoadLevel1()
     {
-        StartCoroutine(LoadLevelWithDelay("Level1", 3f)); // 3 seconds delay
+        StartCoroutine(LoadLevelWithDelay("Level1", 1)); // 3 seconds delay
     }
 
     public void LoadLevel2()
@@ -20,9 +20,19 @@ public class SceneManage : MonoBehaviour
         StartCoroutine(LoadLevelWithDelay("Level3", 3f)); // 3 seconds delay
     }
 
+    public void LoadLevel4()
+    {
+        StartCoroutine(LoadLevelWithDelay("Level4", 3f)); // 3 seconds delay
+    }
+
     private IEnumerator LoadLevelWithDelay(string levelName, float delay)
     {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(levelName); 
+    }
+    
+    public void OnPlayClick()
+    {
+        LoadLevel1();
     }
 }

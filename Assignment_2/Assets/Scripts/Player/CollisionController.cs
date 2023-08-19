@@ -36,7 +36,7 @@ public class CollisionController : MonoBehaviour
             Destroy(gameObject);
             Destroy(col.gameObject);
             PanelEnd.SetActive(true);
-            //Add Load level 4 later
+            _SceneManage.LoadLevel4();
         }
         
     }
