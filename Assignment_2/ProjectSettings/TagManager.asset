@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Level3Crate
+  - Level1Crate
+  - Level2Crate
   layers:
   - Default
   - TransparentFX

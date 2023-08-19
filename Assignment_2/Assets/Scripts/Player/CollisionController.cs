@@ -5,24 +5,39 @@ using UnityEngine;
 public class CollisionController : MonoBehaviour
 {
     public PlayerController playerController;
+    public SceneManage _SceneManage;
+    [SerializeField]private GameObject PanelEnd;
     // Start is called before the first frame update
     void Start()
     {
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (playerController.ActiveBlock == 1 && col.gameObject.name == "RedCrate2")
+        if (col.gameObject.CompareTag("Level1Crate"))
         {
-            Debug.Log("Line Connected");
             Destroy(gameObject);
             Destroy(col.gameObject);
+            PanelEnd.SetActive(true);
+            _SceneManage.LoadLevel2();    
         }
+        
+        if (col.gameObject.CompareTag("Level2Crate"))
+        {
+            Destroy(gameObject);
+            Destroy(col.gameObject);
+            PanelEnd.SetActive(true);
+            _SceneManage.LoadLevel3();    
+        }
+        
+        if (col.gameObject.CompareTag("Level3Crate"))
+        {
+            Destroy(gameObject);
+            Destroy(col.gameObject);
+            PanelEnd.SetActive(true);
+            //Add Load level 4 later
+        }
+        
     }
 }
