@@ -39,5 +39,13 @@ public class CollisionController : MonoBehaviour
             _SceneManage.LoadLevel4();
         }
         
+        if (col.gameObject.CompareTag("Level4Crate"))
+        {
+            Destroy(gameObject);
+            Destroy(col.gameObject);
+            PanelEnd.SetActive(true);
+            _SceneManage.LoadLevel5();
+        }
+        
     }
 }

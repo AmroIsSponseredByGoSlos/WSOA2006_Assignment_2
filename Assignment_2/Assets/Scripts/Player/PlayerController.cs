@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
             lastMoveDirection = MoveDirection; // Store the non-zero input direction
         }
 
-        transform.Translate(lastMoveDirection * 5f * Time.deltaTime, Space.World);
+        transform.Translate(lastMoveDirection * 2.8f * Time.deltaTime, Space.World);
         transform.up = lastMoveDirection.normalized;
     }
     void OnCollisionEnter2D(Collision2D col)

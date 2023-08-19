@@ -24,6 +24,10 @@ public class SceneManage : MonoBehaviour
     {
         StartCoroutine(LoadLevelWithDelay("Level4", 3f)); // 3 seconds delay
     }
+    public void LoadLevel5()
+    {
+        StartCoroutine(LoadLevelWithDelay("Level5", 3f)); // 3 seconds delay
+    }
 
     private IEnumerator LoadLevelWithDelay(string levelName, float delay)
     {
