@@ -959,9 +959,13 @@ MonoBehaviour:
   CrateLight: {fileID: 1902405959}
   OtherCrateLight: {fileID: 220983068}
   EnemyPrefab: {fileID: 0}
+  FlagPrefab: {fileID: 2219697849941906465, guid: 78fae9785075ab24db70b3db06207cda, type: 3}
+  FlagTxt: {fileID: 0}
   HoldingPoint: {fileID: 0}
+  _player: {fileID: 777281269}
   HoldingCrate: 0
   ActiveBlock: 0
+  FlagCount: 5
 --- !u!212 &777281273
 SpriteRenderer:
   m_ObjectHideFlags: 0
