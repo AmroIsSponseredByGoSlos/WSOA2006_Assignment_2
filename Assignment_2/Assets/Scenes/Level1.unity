@@ -2687,12 +2687,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1382202779533566962, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: maximum
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382202779533566962, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
       propertyPath: _FlashlightController
       value: 
       objectReference: {fileID: 1246988252}
     - target: {fileID: 1382202779736523463, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382202780199964778, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382202780199964778, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7871865
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382202780199964778, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}

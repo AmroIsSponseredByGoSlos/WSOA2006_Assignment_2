@@ -3237,9 +3237,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1382202779533566962, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: maximum
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382202779533566962, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
       propertyPath: _FlashlightController
       value: 
       objectReference: {fileID: 777281268}
+    - target: {fileID: 1382202780199964778, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382202780199964778, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382202780199964778, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6425637079092206837, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
       propertyPath: totalTime
       value: 200
