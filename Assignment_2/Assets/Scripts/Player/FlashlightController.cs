@@ -9,7 +9,7 @@ public class FlashlightController : MonoBehaviour
     public int LightTime;
     private float countdownInterval = 1f; // Update timer every one second
     private float countdownTimer = 0f; // Update timer every one second
-    
+    public PlayerController playerController;
     public bool isOn;
     
    [SerializeField]private GameObject Flashlight;
@@ -26,12 +26,12 @@ public class FlashlightController : MonoBehaviour
             DecreaseLightTime();
         }
         
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && playerController.HoldingCrate == false)
         {
             ActivateLight();
         }
 
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2") && playerController.HoldingCrate == false)
         {
             DeactivateLight();   
         }

@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public GameObject EnemyPrefab;
     private Vector2 lastMoveDirection = Vector2.zero; // Add this variable at the top of your class
     [SerializeField] private Transform HoldingPoint;
+    public bool HoldingCrate = false;
     public int ActiveBlock = 0;
     void Start()
     {
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
     {
         if (col.gameObject.name == "RedCrate")
         {
+            HoldingCrate = true;
             col.transform.parent = Player.transform;
             Light.SetActive(false);
             CrateLight.SetActive(true);

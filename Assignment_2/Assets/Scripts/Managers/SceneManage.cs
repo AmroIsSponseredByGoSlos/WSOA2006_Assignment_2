@@ -5,6 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class SceneManage : MonoBehaviour
 {
+    public FlashlightController flashlightController;
+    public bool Subtracted = false;
+
+    void Update()
+    {
+        Scene ActiveScene = SceneManager.GetActiveScene();
+        if (ActiveScene.name == "Level4" && !Subtracted)
+        {
+            flashlightController.LightTime = 0;
+            Subtracted = true;
+        }
+    }
+
     public void LoadLevel1()
     {
         StartCoroutine(LoadLevelWithDelay("Level1", 1)); // 3 seconds delay
@@ -23,6 +36,7 @@ public class SceneManage : MonoBehaviour
     public void LoadLevel4()
     {
         StartCoroutine(LoadLevelWithDelay("Level4", 3f)); // 3 seconds delay
+        flashlightController.LightTime = 0;
     }
     public void LoadLevel5()
     {

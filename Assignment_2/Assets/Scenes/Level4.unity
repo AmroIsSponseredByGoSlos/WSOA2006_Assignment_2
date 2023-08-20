@@ -1994,6 +1994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LightTime: 30
+  playerController: {fileID: 1592791779}
   isOn: 0
   Flashlight: {fileID: 1826681276}
   BatteryText: {fileID: 23257287}
@@ -2033,6 +2034,7 @@ MonoBehaviour:
   OtherCrateLight: {fileID: 869325704}
   EnemyPrefab: {fileID: 0}
   HoldingPoint: {fileID: 0}
+  HoldingCrate: 0
   ActiveBlock: 0
 --- !u!50 &1592791780
 Rigidbody2D:
@@ -2427,5 +2429,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneManger
       objectReference: {fileID: 0}
+    - target: {fileID: 6879700283154595063, guid: a61fd3ecaa57f324fb84ffa1b8dbf4b1, type: 3}
+      propertyPath: flashlightController
+      value: 
+      objectReference: {fileID: 1592791777}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a61fd3ecaa57f324fb84ffa1b8dbf4b1, type: 3}

@@ -3220,5 +3220,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneManger
       objectReference: {fileID: 0}
+    - target: {fileID: 6879700283154595063, guid: a61fd3ecaa57f324fb84ffa1b8dbf4b1, type: 3}
+      propertyPath: flashlightController
+      value: 
+      objectReference: {fileID: 497441576}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a61fd3ecaa57f324fb84ffa1b8dbf4b1, type: 3}
