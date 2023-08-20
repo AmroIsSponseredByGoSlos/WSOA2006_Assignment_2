@@ -3921,6 +3921,10 @@ PrefabInstance:
       propertyPath: _BatteryText
       value: 
       objectReference: {fileID: 1189060132}
+    - target: {fileID: 713711119506210078, guid: b5af8e0b0fca92b42838a0a671b39e4c, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1154354723}
     - target: {fileID: 713711119506210079, guid: b5af8e0b0fca92b42838a0a671b39e4c, type: 3}
       propertyPath: m_Name
       value: Player

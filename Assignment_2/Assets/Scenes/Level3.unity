@@ -1972,6 +1972,7 @@ MonoBehaviour:
   OtherCrateLight: {fileID: 217096857}
   EnemyPrefab: {fileID: 0}
   HoldingPoint: {fileID: 0}
+  HoldingCrate: 0
   ActiveBlock: 0
 --- !u!212 &497441572
 SpriteRenderer:
@@ -2102,6 +2103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LightTime: 30
+  playerController: {fileID: 497441571}
   isOn: 0
   Flashlight: {fileID: 1308256627}
   BatteryText: {fileID: 1329019087}
