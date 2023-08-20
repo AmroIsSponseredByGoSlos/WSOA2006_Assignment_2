@@ -10,6 +10,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/SceneManage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/FlashlightController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Level1Load.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ProgressBar.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -87,6 +88,7 @@
       <workItem from="1692447229451" duration="1407000" />
       <workItem from="1692469135151" duration="1219000" />
       <workItem from="1692543663355" duration="1352000" />
+      <workItem from="1692557668208" duration="2921000" />
     </task>
     <servers />
   </component>

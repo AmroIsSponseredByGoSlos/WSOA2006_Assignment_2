@@ -1066,18 +1066,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.02275753, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.5, y: 1.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95448494, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1089902124
 SpriteRenderer:
@@ -1120,8 +1120,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: e15a738fe0560734cad2c0b831a3f8ea, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
   m_DrawMode: 0
@@ -1144,8 +1144,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 777281272}
+  _FlashlightController: {fileID: 0}
   _SceneManage: {fileID: 399011683}
   PanelEnd: {fileID: 581418106}
+  EndScreen: {fileID: 0}
+  _timer: {fileID: 214773361182935608}
 --- !u!1 &1464513161
 GameObject:
   m_ObjectHideFlags: 0
@@ -3238,7 +3241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1382202779533566962, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
       propertyPath: maximum
-      value: 100
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1382202779533566962, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
       propertyPath: _FlashlightController
@@ -3258,7 +3261,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6425637079092206837, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
       propertyPath: totalTime
-      value: 200
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+--- !u!114 &214773361182935608 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6425637079092206837, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+  m_PrefabInstance: {fileID: 214773361182935607}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d13e8c4c67e3cd54fa614e4b6910131f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

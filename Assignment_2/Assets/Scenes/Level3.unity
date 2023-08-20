@@ -457,6 +457,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &403973539 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6425637079092206837, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+  m_PrefabInstance: {fileID: 1329019085}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d13e8c4c67e3cd54fa614e4b6910131f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &441256099
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,7 +2117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e846bd8cca453409b6ba49775de6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LightTime: 30
+  LightTime: 15
   playerController: {fileID: 497441571}
   isOn: 0
   Flashlight: {fileID: 1308256627}
@@ -2558,8 +2569,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: e15a738fe0560734cad2c0b831a3f8ea, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
   m_DrawMode: 0
@@ -2578,7 +2589,7 @@ Transform:
   m_GameObject: {fileID: 765985190}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.94, y: -7.25, z: -0.061551947}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7625, y: 0.65953124, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 805426834}
@@ -2602,7 +2613,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.5, y: 1.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2624,8 +2635,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 497441571}
+  _FlashlightController: {fileID: 0}
   _SceneManage: {fileID: 2130586291}
   PanelEnd: {fileID: 1329019086}
+  EndScreen: {fileID: 0}
+  _timer: {fileID: 403973539}
 --- !u!1 &799442643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,7 +2885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1308256628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2937,10 +2951,10 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 73.7
-  m_PointLightOuterAngle: 73.7
+  m_PointLightInnerAngle: 60.31
+  m_PointLightOuterAngle: 60.31
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 6.421908
+  m_PointLightOuterRadius: 5.9462748
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -2958,7 +2972,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308256627}
-  m_LocalRotation: {x: -0, y: -0, z: -0.0067553963, w: 0.9999772}
+  m_LocalRotation: {x: -0, y: -0, z: -0.0044914577, w: 0.9999899}
   m_LocalPosition: {x: -0.02, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3066,6 +3080,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1382202779533566962, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: maximum
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382202779533566962, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
       propertyPath: _FlashlightController
       value: 
       objectReference: {fileID: 497441576}
@@ -3080,6 +3098,10 @@ PrefabInstance:
     - target: {fileID: 1382202780199964778, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425637079092206837, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: totalTime
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
@@ -3299,6 +3321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneManger
       objectReference: {fileID: 0}
+    - target: {fileID: 6879700283154595063, guid: a61fd3ecaa57f324fb84ffa1b8dbf4b1, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 497441571}
     - target: {fileID: 6879700283154595063, guid: a61fd3ecaa57f324fb84ffa1b8dbf4b1, type: 3}
       propertyPath: flashlightController
       value: 

@@ -5,8 +5,11 @@ using UnityEngine;
 public class CollisionController : MonoBehaviour
 {
     public PlayerController playerController;
+    public FlashlightController _FlashlightController;
     public SceneManage _SceneManage;
     [SerializeField]private GameObject PanelEnd;
+    [SerializeField]private GameObject EndScreen;
+    [SerializeField] private Timer _timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,7 @@ public class CollisionController : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(col.gameObject);
+            _timer.enabled = false;
             PanelEnd.SetActive(true);
             _SceneManage.LoadLevel2();
             _SceneManage.FlagReset = false;
@@ -28,6 +32,7 @@ public class CollisionController : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(col.gameObject);
+            _timer.enabled = false;
             PanelEnd.SetActive(true);
             _SceneManage.LoadLevel3();
             _SceneManage.FlagReset = false;
@@ -37,6 +42,7 @@ public class CollisionController : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(col.gameObject);
+            _timer.enabled = false;
             PanelEnd.SetActive(true);
             _SceneManage.LoadLevel4();
             _SceneManage.FlagReset = false;
@@ -46,9 +52,20 @@ public class CollisionController : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(col.gameObject);
+            _timer.enabled = false;
             PanelEnd.SetActive(true);
             _SceneManage.LoadLevel5();
             _SceneManage.FlagReset = false;
+        }
+        
+        if (col.gameObject.CompareTag("Finish"))
+        {
+            Destroy(gameObject);
+            Destroy(col.gameObject);
+            _timer.enabled = false;
+            playerController.enabled = false;
+            _FlashlightController.enabled = false;
+            EndScreen.SetActive(true);
         }
         
     }
