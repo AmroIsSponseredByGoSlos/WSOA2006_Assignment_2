@@ -20,7 +20,8 @@ public class CollisionController : MonoBehaviour
             Destroy(gameObject);
             Destroy(col.gameObject);
             PanelEnd.SetActive(true);
-            _SceneManage.LoadLevel2();    
+            _SceneManage.LoadLevel2();
+            _SceneManage.FlagReset = false;
         }
         
         if (col.gameObject.CompareTag("Level2Crate"))
@@ -28,7 +29,8 @@ public class CollisionController : MonoBehaviour
             Destroy(gameObject);
             Destroy(col.gameObject);
             PanelEnd.SetActive(true);
-            _SceneManage.LoadLevel3();    
+            _SceneManage.LoadLevel3();
+            _SceneManage.FlagReset = false;
         }
         
         if (col.gameObject.CompareTag("Level3Crate"))
@@ -37,6 +39,7 @@ public class CollisionController : MonoBehaviour
             Destroy(col.gameObject);
             PanelEnd.SetActive(true);
             _SceneManage.LoadLevel4();
+            _SceneManage.FlagReset = false;
         }
         
         if (col.gameObject.CompareTag("Level4Crate"))
@@ -45,6 +48,7 @@ public class CollisionController : MonoBehaviour
             Destroy(col.gameObject);
             PanelEnd.SetActive(true);
             _SceneManage.LoadLevel5();
+            _SceneManage.FlagReset = false;
         }
         
     }

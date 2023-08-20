@@ -959,9 +959,13 @@ MonoBehaviour:
   CrateLight: {fileID: 1902405959}
   OtherCrateLight: {fileID: 220983068}
   EnemyPrefab: {fileID: 0}
+  FlagPrefab: {fileID: 2219697849941906465, guid: 78fae9785075ab24db70b3db06207cda, type: 3}
+  FlagTxt: {fileID: 0}
   HoldingPoint: {fileID: 0}
+  _player: {fileID: 777281269}
   HoldingCrate: 0
   ActiveBlock: 0
+  FlagCount: 5
 --- !u!212 &777281273
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3476,5 +3480,9 @@ PrefabInstance:
       propertyPath: _FlashlightController
       value: 
       objectReference: {fileID: 777281268}
+    - target: {fileID: 6425637079092206837, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: totalTime
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}

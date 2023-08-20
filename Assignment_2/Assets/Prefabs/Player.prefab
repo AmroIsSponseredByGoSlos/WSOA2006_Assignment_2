@@ -107,7 +107,10 @@ MonoBehaviour:
   CrateLight: {fileID: 0}
   OtherCrateLight: {fileID: 0}
   EnemyPrefab: {fileID: 0}
+  FlagPrefab: {fileID: 2219697849941906465, guid: 78fae9785075ab24db70b3db06207cda, type: 3}
   HoldingPoint: {fileID: 0}
+  _player: {fileID: 713711119506210077}
+  HoldingCrate: 0
   ActiveBlock: 0
 --- !u!61 &713711119506210074
 BoxCollider2D:
@@ -122,7 +125,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.21133333}
+  m_Offset: {x: -0.0065817833, y: -0.005859375}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -133,7 +136,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.6972475, y: 0.77622604}
   m_EdgeRadius: 0
 --- !u!50 &713711119506210075
 Rigidbody2D:
@@ -168,7 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e846bd8cca453409b6ba49775de6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LightTime: 20
+  LightTime: 25
+  playerController: {fileID: 713711119506210076}
   isOn: 0
   Flashlight: {fileID: 713711120169899144}
   BatteryText: {fileID: 0}

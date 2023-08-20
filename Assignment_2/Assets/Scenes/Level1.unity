@@ -484,6 +484,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneManger
       objectReference: {fileID: 0}
+    - target: {fileID: 6879700283154595063, guid: a61fd3ecaa57f324fb84ffa1b8dbf4b1, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1246988256}
+    - target: {fileID: 6879700283154595063, guid: a61fd3ecaa57f324fb84ffa1b8dbf4b1, type: 3}
+      propertyPath: flashlightController
+      value: 
+      objectReference: {fileID: 1246988252}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a61fd3ecaa57f324fb84ffa1b8dbf4b1, type: 3}
 --- !u!1 &452664300
@@ -1326,9 +1334,13 @@ MonoBehaviour:
   CrateLight: {fileID: 16381107}
   OtherCrateLight: {fileID: 1921677280}
   EnemyPrefab: {fileID: 0}
+  FlagPrefab: {fileID: 2219697849941906465, guid: 78fae9785075ab24db70b3db06207cda, type: 3}
+  FlagTxt: {fileID: 0}
   HoldingPoint: {fileID: 1224813037}
+  _player: {fileID: 1246988253}
   HoldingCrate: 0
   ActiveBlock: 0
+  FlagCount: 5
 --- !u!212 &1246988257
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2570,6 +2582,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1305349562, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5.4500732
+      objectReference: {fileID: 0}
     - target: {fileID: 1382202778341701210, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2658,6 +2674,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 540257994}
+    - target: {fileID: 1382202778341701211, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 1382202778341701214, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
       propertyPath: m_Name
       value: Player_UI

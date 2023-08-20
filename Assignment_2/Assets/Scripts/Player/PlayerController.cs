@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,13 +10,22 @@ public class PlayerController : MonoBehaviour
     public GameObject CrateLight;
     public GameObject OtherCrateLight;
     public GameObject EnemyPrefab;
+    public GameObject FlagPrefab;
+    public Text FlagTxt;
+    
     private Vector2 lastMoveDirection = Vector2.zero; // Add this variable at the top of your class
+    
     [SerializeField] private Transform HoldingPoint;
+    [SerializeField] private Transform _player;
+    
     public bool HoldingCrate = false;
+    
     public int ActiveBlock = 0;
+    public int FlagCount = 5 ;
     void Start()
     {
         Player = gameObject;
+        FlagTxt = GameObject.Find("FlagTxt").GetComponent<Text>();
     }
 
 
@@ -32,6 +42,13 @@ public class PlayerController : MonoBehaviour
 
         transform.Translate(lastMoveDirection * 2.8f * Time.deltaTime, Space.World);
         transform.up = lastMoveDirection.normalized;
+
+        if (Input.GetKeyDown(KeyCode.Space) && FlagCount > 0)
+        {
+            SpawnFlagMark();
+            FlagCount--;
+        }
+        FlagTxt.text = "Flags Remaining : " + FlagCount;
     }
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -45,4 +62,11 @@ public class PlayerController : MonoBehaviour
             ActiveBlock = 1;
         }
     }
+
+    void SpawnFlagMark()
+    {
+        GameObject NewFlag = Instantiate(FlagPrefab,_player.transform.position, Quaternion.identity);            
+    }
+    
+    
 }

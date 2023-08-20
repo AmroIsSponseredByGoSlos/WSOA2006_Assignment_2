@@ -5,12 +5,40 @@ using UnityEngine.SceneManagement;
 
 public class SceneManage : MonoBehaviour
 {
+    public PlayerController playerController;
     public FlashlightController flashlightController;
     public bool Subtracted = false;
+    public bool FlagReset = false;
 
     void Update()
     {
+        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
         Scene ActiveScene = SceneManager.GetActiveScene();
+        if (ActiveScene.name == "Level1" && !FlagReset)
+        {
+            playerController.FlagCount = 1;
+            FlagReset = true;
+        }
+        if (ActiveScene.name == "Level2" && !FlagReset)
+        {
+            playerController.FlagCount = 2;
+            FlagReset = true;
+        }
+        if (ActiveScene.name == "Level3" && !FlagReset)
+        {
+            playerController.FlagCount = 2;
+            FlagReset = true;
+        }
+        if (ActiveScene.name == "Level4" && !FlagReset)
+        {
+            playerController.FlagCount = 0;
+            FlagReset = true;
+        }
+        if (ActiveScene.name == "Level5" && !FlagReset)
+        {
+            playerController.FlagCount = 4;
+            FlagReset = true;
+        }
         if (ActiveScene.name == "Level4" && !Subtracted)
         {
             flashlightController.LightTime = 0;
