@@ -9,10 +9,17 @@ public class PlayerController : MonoBehaviour
     public GameObject CrateLight;
     public GameObject OtherCrateLight;
     public GameObject EnemyPrefab;
+    public GameObject FlagPrefab;
+    
     private Vector2 lastMoveDirection = Vector2.zero; // Add this variable at the top of your class
+    
     [SerializeField] private Transform HoldingPoint;
+    [SerializeField] private Transform _player;
+    
     public bool HoldingCrate = false;
+    
     public int ActiveBlock = 0;
+    private int FlagCount = 5 ;
     void Start()
     {
         Player = gameObject;
@@ -32,6 +39,11 @@ public class PlayerController : MonoBehaviour
 
         transform.Translate(lastMoveDirection * 2.8f * Time.deltaTime, Space.World);
         transform.up = lastMoveDirection.normalized;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SpawnFlagMark();   
+        }
     }
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -45,4 +57,14 @@ public class PlayerController : MonoBehaviour
             ActiveBlock = 1;
         }
     }
+
+    void SpawnFlagMark()
+    {
+        if (FlagCount > 0 )
+        {
+            GameObject NewFlag = Instantiate(FlagPrefab,_player.transform.position, Quaternion.identity);    
+        }
+    }
+    
+    
 }
