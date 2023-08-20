@@ -57,6 +57,16 @@ public class CollisionController : MonoBehaviour
             _SceneManage.LoadLevel5();
             _SceneManage.FlagReset = false;
         }
+
+        if (col.gameObject.CompareTag("Level5Crate"))
+        {
+            Destroy(gameObject);
+            Destroy(col.gameObject);
+            _timer.enabled = false;
+            PanelEnd.SetActive(true);
+            _SceneManage.LoadLevel6();
+            _SceneManage.FlagReset = false;
+        }
         
         if (col.gameObject.CompareTag("Finish"))
         {

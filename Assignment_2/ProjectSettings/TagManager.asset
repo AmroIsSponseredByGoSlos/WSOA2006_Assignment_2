@@ -9,6 +9,7 @@ TagManager:
   - Level2Crate
   - Level4Crate
   - EndSceneCrate
+  - Level5Crate
   layers:
   - Default
   - TransparentFX

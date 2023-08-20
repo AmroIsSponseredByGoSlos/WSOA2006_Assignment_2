@@ -734,7 +734,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6879700283154595063, guid: a61fd3ecaa57f324fb84ffa1b8dbf4b1, type: 3}
   m_PrefabInstance: {fileID: 1010049386}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1707855409}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d8841ad456fce0429d1ace918256488, type: 3}
@@ -1350,12 +1350,40 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 88234664, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 88234664, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1707855409}
+      objectReference: {fileID: 655960445}
+    - target: {fileID: 88234664, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 88234664, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneManage, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 88234664, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270735568, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 655960445}
+    - target: {fileID: 1270735568, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EndGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270735568, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneManage, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270735568, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1305349559, guid: 6a5013ba1247cd04ca1c0cd6114274e1, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1733,11 +1761,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1707855409 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6879700283154595062, guid: a61fd3ecaa57f324fb84ffa1b8dbf4b1, type: 3}
-  m_PrefabInstance: {fileID: 1010049386}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1730946309
 GameObject:
   m_ObjectHideFlags: 0

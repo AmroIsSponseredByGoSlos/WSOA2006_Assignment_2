@@ -9,11 +9,12 @@ public class SceneManage : MonoBehaviour
     public FlashlightController flashlightController;
     public bool Subtracted = false;
     public bool FlagReset = false;
+    public Scene ActiveScene;
 
     void Update()
     {
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();    
-        Scene ActiveScene = SceneManager.GetActiveScene();
+        ActiveScene = SceneManager.GetActiveScene();
         if (ActiveScene.name == "Level1" && !FlagReset)
         {
             playerController.FlagCount = 1;
@@ -69,6 +70,10 @@ public class SceneManage : MonoBehaviour
     {
         StartCoroutine(LoadLevelWithDelay("Level5", 3f)); // 3 seconds delay
     }
+    public void LoadLevel6()
+    {
+        StartCoroutine(LoadLevelWithDelay("Level6", 3f)); // 3 seconds delay
+    }
 
     public void EndGame()
     {
@@ -79,6 +84,11 @@ public class SceneManage : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(levelName); 
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(ActiveScene.name);
     }
  
 }
